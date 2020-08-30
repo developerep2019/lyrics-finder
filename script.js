@@ -52,7 +52,13 @@ function getLyrics(artistName, songTitle){
 
 // Search Button Event Handler
 searchBtn.addEventListener('click' , ()=> {
-    searchViaSong()
+    if(searchText.value === '' || searchText.value === ' '){
+        alert('please Enter a Song Name')
+    }
+    else{
+        searchViaSong();
+        searchText.value = '';
+    }
 })
 
 //Get Lyrics Via {Get Lyrics} Button
